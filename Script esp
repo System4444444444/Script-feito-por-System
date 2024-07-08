@@ -1,0 +1,9 @@
+local ESP_ENABLED = true
+local function drawESP
+    for _, player in ipairs(game:GetService("Players"):GetPlayers())
+        if player ~= game:GetService("Players").LocalPlayer and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+            local box = Drawing.new("Square")
+            box.Size = Vector2.new(50, 100)
+            box.Color = Color3.fromRGB(0, 255, 0)
+            box.Thickness = 2
+            box.Transparency = 0.5 
